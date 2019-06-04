@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <style>
+            * {color: black;}
+            .titulo {
+                color: white; 
+                margin: 10px auto;
+            }
+            .wrapper_titulo {
+                margin-bottom: 20px;
+            }
+            .res {
+	            padding-bottom: 5px;
+	            font-size: 1.1em;
+                color: tomato;
+            }
+        </style>
+    </head>
+
+<body> 
+<div class="container-fluid">
+    <div class="wrapper_titulo row">
+        <div class="col-12 bg-primary">
+            <p class="titulo">EX. Vehículos</p>
+        </div>
+    </div>
+
+    <div class="row d-flex">
+
+        <div class="col-lg-2">
+            <form onsubmit="return false">
+                <div class="form-group">
+                    <label for="inputPlate">Plate</label>
+                    <input type="text" class="form-control" id="inputPlate" minlength="7" maxlength="7" required>
+                </div>
+                <div class="form-group">
+                    <label for="inputBrand">Brand</label>
+                    <input type="text" class="form-control" id="inputBrand" required>
+                </div>
+                <div class="form-group">
+                    <label for="inputColor">Color</label>
+                    <input type="text" class="form-control" id="inputColor" required>
+                </div>
+                <button type="submit" class="btn btn-primary" onclick="getValues()">Create Car</button>
+            </form>
+        </div>
+
+        <div class="col-lg-6 mt-5 mt-lg-0">
+        <form onsubmit="return false" id="wheelsform">
+            <div class="row">
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label for="inputDiametroRueda1">Diámetro Rueda 1</label>
+                            <input type="text" class="input form-control" id="inputDiametroRueda1" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputMarcaRueda1">Marca Rueda 1</label>
+                            <input type="text" class="input form-control" id="inputMarcaRueda1" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputDiametroRueda2">Diámetro Rueda 2</label>
+                            <input type="text" class="input form-control" id="inputDiametroRueda2" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputMarcaRueda2">Marca Rueda 2</label>
+                            <input type="text" class="input form-control" id="inputMarcaRueda2" required>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label for="inputDiametroRueda3">Diámetro Rueda 3</label>
+                            <input type="text" class="input form-control" id="inputDiametroRueda3" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputMarcaRueda3">Marca Rueda 3</label>
+                            <input type="text" class="input form-control" id="inputMarcaRueda3" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputDiametroRueda4">Diámetro Rueda 4</label>
+                            <input type="text" class="input form-control" id="inputDiametroRueda4" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputMarcaRueda4">Marca Rueda 4</label>
+                            <input type="text" class="input form-control" id="inputMarcaRueda4" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary" onclick="addWheels(car)">Add wheels</button>
+                    </div>
+            </div>
+        </form>
+        </div>
+        
+        <div class="col-lg-2 mt-5 mt-lg-0">
+                <p>CAR</p>
+                <p id="carInfo" class="res"></p>
+        </div>
+
+        <div class="col-lg-2 mt-5 mt-lg-0">
+                <p>WHEELS</p>
+                <p id="wheelsInfo" class="res"></p>
+        </div>
+
+    </div> 
+</div>
+</body>
+</html>
