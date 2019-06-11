@@ -1,8 +1,8 @@
 class Car {
-    plate:string;
-    color:string;
-    brand:string;
-    wheels:Wheel[] = new Array();
+    private plate:string;
+    private color:string;
+    private brand:string;
+    private wheels:Wheel[] = new Array();
     
     constructor(plate:string,color:string,brand:string) {
         this.plate=plate;
@@ -13,6 +13,7 @@ class Car {
     addWheel(wheel:Wheel):void {
         this.wheels.push(wheel);
     }
+    
 
     deleteWheel():void {
         this.wheels = [];

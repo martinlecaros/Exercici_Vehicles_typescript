@@ -1,5 +1,4 @@
-{
-  "compileOnSave": false,
+{ "compileOnSave": false,
   "include": ["**/*"],
   "compilerOptions": {
     /* Basic Options */
